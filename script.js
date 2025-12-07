@@ -62,8 +62,21 @@ for (let i = 0; i < csvString.length; i++) {
         }
     }
 }
-console.log(output)
-console.log(columns)
+// console.log(output)
 
 //-------------- Expanding Functionality ----------
 
+keys = output[0];
+values = output.slice(1);
+outputObject= {}
+
+for(let i = 0;i<keys.length;i++){
+    outputObject[keys[i]]= values[i];
+
+    
+
+}
+console.log(outputObject)
+
+// console.log(keys)
+// console.log(values)
