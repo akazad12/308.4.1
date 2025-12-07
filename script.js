@@ -69,14 +69,23 @@ for (let i = 0; i < csvString.length; i++) {
 keys = output[0];
 values = output.slice(1);
 outputObject= {}
+counter = 0;
+// console.log(keys,values)
 
-for(let i = 0;i<keys.length;i++){
-    outputObject[keys[i]]= values[i];
+for(let i = 0;i<values.length;i++){
 
-    
+    for (let j = 0;j<keys.length;j++){
+        outputObject[keys[j]]=values[i][j]
+         console.log(values[i][j])
+
+    }
+
+
+
 
 }
 console.log(outputObject)
+// console.log(outputObject,counter)
 
 // console.log(keys)
 // console.log(values)
