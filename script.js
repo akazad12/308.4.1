@@ -68,28 +68,35 @@ for (let i = 0; i < csvString.length; i++) {
 
 keys = output[0];
 values = output.slice(1);
-outputObject2= {}
 x = []
 counter = 0;
-// console.log(keys,values)
 
 for(let i = 0;i<values.length;i++){
     // console.log(x)
     // x.push(outputObject2)
-    console.log('hello')
-    console.log(outputObject2)
-    x.push(outputObject2)
+    if (i==values.length){
+        break;
+    }
+    obj= {}
+    // console.log(outputObject2)
     // console.log(x)
     for (let j = 0;j<keys.length;j++){
-        outputObject2[keys[j]]=values[i][j]
+
+        obj[keys[j]]=values[i][j]
         // console.log(outputObject2)
 
     }
+    tempkey = obj.ID
+    obj.id =obj.ID
+    delete obj.ID
 
+        console.log('hello')
+    x.push(obj)
+    console.log(x)
 
 
 }
-console.log(x)
+// console.log(x)
 // console.log(outputObject,counter)
 
 // console.log(keys)
