@@ -105,6 +105,18 @@ for (let i =0;i<finalOutput.length;i++){
     totAge+=Number(finalOutput[i]['age'])
 }
 avgAge = totAge/finalOutput.length
-console.log(`Average age of the group is ${avgAge}`)
+// console.log(`Average age of the group is ${avgAge}`)
 
 
+//Transform the final set of data back into CSV format
+newCsv =[]
+for (let i=0;i<finalOutput.length;i++ ){
+    if (i==0){
+        column = Object.keys(finalOutput[i])
+        newCsv.push(column)
+    }
+    row = Object.values(finalOutput[i])
+    newCsv.push(row)
+
+    }
+console.log(newCsv)
