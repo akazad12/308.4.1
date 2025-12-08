@@ -64,40 +64,27 @@ for (let i = 0; i < csvString.length; i++) {
 }
 // console.log(output)
 
-//-------------- Expanding Functionality ----------
+//-------------- Transforming Data ----------
 
 keys = output[0];
+keys[0]='id'
 values = output.slice(1);
-x = []
+finalOutput = []
 counter = 0;
 
 for(let i = 0;i<values.length;i++){
-    // console.log(x)
-    // x.push(outputObject2)
-    if (i==values.length){
-        break;
-    }
     obj= {}
-    // console.log(outputObject2)
-    // console.log(x)
     for (let j = 0;j<keys.length;j++){
 
-        obj[keys[j]]=values[i][j]
-        // console.log(outputObject2)
-
+        obj[keys[j]]=values[i][j];
     }
-    tempkey = obj.ID
-    obj.id =obj.ID
-    delete obj.ID
 
-        console.log('hello')
-    x.push(obj)
-    console.log(x)
+    finalOutput.push(obj);
 
 
 }
-// console.log(x)
-// console.log(outputObject,counter)
 
-// console.log(keys)
-// console.log(values)
+console.log(finalOutput)
+
+//-------------- Sorting and Manipulating Data ----------
+
