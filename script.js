@@ -80,23 +80,31 @@ for(let i = 1;i<output.length;i++){
     }
     finalOutput.push(obj);
 }
-// console.log(finalOutput)
+//  console.log(finalOutput)
 
 //-------------- Sorting and Manipulating Data ----------
 
 // Remove the last element from the sorted array.
 finalOutput.pop()
-// console.log(finalOutput)
+//  console.log(finalOutput)
 
 //Insert the following object at index 1:
 finalOutput.splice(1,0,{ id: "48", name: "Barry", occupation: "Runner", age: "25" })
-// console.log(finalOutput)
+//  console.log(finalOutput)
 
 //Add the following object to the end of the array:'
 finalOutput.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" })
-// console.log(finalOutput)
+//  console.log(finalOutput)
 
 
 
+// //Finally, use the values of each object within the array and the array’s length property to calculate the average age of the group
+totAge = 0
+
+for (let i =0;i<finalOutput.length;i++){
+    totAge+=Number(finalOutput[i]['age'])
+}
+avgAge = totAge/finalOutput.length
+console.log(`Average age of the group is ${avgAge}`)
 
 
