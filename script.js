@@ -78,13 +78,15 @@ for(let i = 0;i<values.length;i++){
 
         obj[keys[j]]=values[i][j];
     }
-
     finalOutput.push(obj);
-
-
 }
 
 console.log(finalOutput)
 
 //-------------- Sorting and Manipulating Data ----------
+
+// Remove the last element from the sorted array.
+finalOutput.pop()
+console.log(finalOutput)
+
 
