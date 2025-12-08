@@ -91,8 +91,11 @@ finalOutput.pop()
 
 //Insert the following object at index 1:
 finalOutput.splice(1,0,{ id: "48", name: "Barry", occupation: "Runner", age: "25" })
-console.log(finalOutput)
+// console.log(finalOutput)
 
+//Add the following object to the end of the array:'
+finalOutput.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" })
+console.log(finalOutput)
 
 
 
