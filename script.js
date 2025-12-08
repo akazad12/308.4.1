@@ -87,6 +87,14 @@ console.log(finalOutput)
 
 // Remove the last element from the sorted array.
 finalOutput.pop()
+// console.log(finalOutput)
+
+//Insert the following object at index 1:
+finalOutput.splice(1,0,{ id: "48", name: "Barry", occupation: "Runner", age: "25" })
 console.log(finalOutput)
+
+
+
+
 
 
