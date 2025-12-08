@@ -67,21 +67,20 @@ for (let i = 0; i < csvString.length; i++) {
 //-------------- Transforming Data ----------
 
 keys = output[0];
-keys[0]='id'
-values = output.slice(1);
+keys = keys.map(keys=>keys.toLowerCase());
+
 finalOutput = []
 counter = 0;
 
-for(let i = 0;i<values.length;i++){
+for(let i = 1;i<output.length;i++){
     obj= {}
     for (let j = 0;j<keys.length;j++){
 
-        obj[keys[j]]=values[i][j];
+        obj[keys[j]]=output[i][j];
     }
     finalOutput.push(obj);
 }
-
-console.log(finalOutput)
+// console.log(finalOutput)
 
 //-------------- Sorting and Manipulating Data ----------
 
@@ -95,7 +94,7 @@ finalOutput.splice(1,0,{ id: "48", name: "Barry", occupation: "Runner", age: "25
 
 //Add the following object to the end of the array:'
 finalOutput.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" })
-console.log(finalOutput)
+// console.log(finalOutput)
 
 
 
