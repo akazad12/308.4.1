@@ -80,7 +80,8 @@ for(let i = 1;i<output.length;i++){
     }
     finalOutput.push(obj);
 }
-//  console.log(finalOutput)
+
+// console.log(finalOutput)
 
 //-------------- Sorting and Manipulating Data ----------
 
@@ -105,18 +106,29 @@ for (let i =0;i<finalOutput.length;i++){
     totAge+=Number(finalOutput[i]['age'])
 }
 avgAge = totAge/finalOutput.length
+
 // console.log(`Average age of the group is ${avgAge}`)
 
 
 //--------------- Transform the final set of data back into CSV format -------------
 newCsv =[]
+
 for (let i=0;i<finalOutput.length;i++ ){
     if (i==0){
+        //Creates the header Values
         column = Object.keys(finalOutput[i])
-        newCsv.push(column)
-    }
-    row = Object.values(finalOutput[i])
-    newCsv.push(row)
+        //pushes the 
+        newCsv.push(column+'\n')
 
     }
+    //
+    row = Object.values(finalOutput[i])
+    newCsv.push(row+'\n')
+
+    }
+
+//replaces commas with spaces in final array
+newCsv =newCsv.join('')
+
 console.log(newCsv)
+// console.log(csvString)
