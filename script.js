@@ -26,11 +26,14 @@
 // }
 // console.log(cells)
 
-//-------------- Expanding Functionality ----------
+console.log('\n-------------- Expanding Functionality ----------\n')
+console.log('\nObjective: Creating a 2d-Array\n')
+
 let csvString = `ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26`;
 
 let cells = [''];
 let commas = 0;
+//Array for later use
 let output = [];
 
 counter = 0
@@ -62,14 +65,15 @@ for (let i = 0; i < csvString.length; i++) {
         }
     }
 }
-// console.log(output)
+console.log(output)
 
-//-------------- Transforming Data ----------
+console.log('\n-------------- Transforming Data ----------\n')
+console.log('\nObjective: Lowercase key values & List of objects\n')
 
-keys = output[0];
+let keys = output[0];
 keys = keys.map(keys=>keys.toLowerCase());
 
-finalOutput = []
+let finalOutput = []
 counter = 0;
 
 for(let i = 1;i<output.length;i++){
@@ -81,37 +85,40 @@ for(let i = 1;i<output.length;i++){
     finalOutput.push(obj);
 }
 
-// console.log(finalOutput)
+console.log(finalOutput)
 
-//-------------- Sorting and Manipulating Data ----------
+console.log('\n-------------- Sorting and Manipulating Data ----------\n')
 
-// Remove the last element from the sorted array.
+console.log('\nObjective: Remove the last element from the sorted array\n')
 finalOutput.pop()
-//  console.log(finalOutput)
+console.log(finalOutput)
 
-//Insert the following object at index 1:
+
+console.log('\nObjective: Insert object at index 1\n')
 finalOutput.splice(1,0,{ id: "48", name: "Barry", occupation: "Runner", age: "25" })
-//  console.log(finalOutput)
+console.log(finalOutput)
 
-//Add the following object to the end of the array:'
+console.log('\nObjective: Add object to the end of the array\n')
 finalOutput.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" })
-//  console.log(finalOutput)
+console.log(finalOutput)
 
 
 
-// //Finally, use the values of each object within the array and the array’s length property to calculate the average age of the group
-totAge = 0
+
+console.log('\nObjective: Calculate average age of group using values in each object & arrays length property\n')
+let totAge = 0
 
 for (let i =0;i<finalOutput.length;i++){
     totAge+=Number(finalOutput[i]['age'])
 }
-avgAge = totAge/finalOutput.length
+let avgAge = totAge/finalOutput.length
 
-// console.log(`Average age of the group is ${avgAge}`)
+console.log(`Average age of the group is ${avgAge}`)
 
 
-//--------------- Transform the final set of data back into CSV format -------------
-newCsv =[]
+console.log('\n--------------- Full Circle -------------\n')
+console.log('\nFinal set of data turned back into CSV format\n')
+let newCsv =[]
 
 for (let i=0;i<finalOutput.length;i++ ){
     if (i==0){
